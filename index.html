@@ -29,14 +29,17 @@
 
     <script>
         var valor = prompt('informe o valor da compra');
-        var jurosd1 = prompt('informe o juros');
+        var jurosd1 = prompt('informe o juros CET');
 
         var retorno;
         valor = parseFloat(valor);
         jurosd1 = parseFloat(jurosd1);
         retorno = parseFloat(retorno);
-
-        retorno = valor * jurosd1;
+        var jurosdiv;
+        jurosdiv = parseFloat(jurosdiv);
+        jurosdiv = jurosd1 / 100;
+        
+        retorno = valor * jurosdiv;
         
         retorno = retorno.toFixed(2);
 
@@ -44,8 +47,8 @@
         retorno2 = parseFloat(retorno2);
         retorno2 = retorno2.toFixed(2);
         retorno2 = valor - retorno;
-        alert('a seu juros é de, ' + retorno + 'reais');
-        alert('o valor total é de, ' + retorno2 + 'reais');
+        alert('a seu juros é de, ' + retorno + 'R$');
+        alert('o valor total é de, ' + retorno2 + 'R$');
 
         var jurosmdr = prompt('informe a taxa de juros mdr');
         var jurosant = prompt('informe a taxa de juros antecipado');
@@ -59,7 +62,7 @@
         soma = parseFloat(soma);
         soma = (jurosant * parcela) + jurosmdr;
         soma = soma.toFixed(2);
-        alert('o valor total é de, ' + soma + 'percentual');
+        alert('o valor total é de, ' + soma + '%');
         
         
 
